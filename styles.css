@@ -19,7 +19,8 @@ div.header-item.search-item {
     height: 40px;
 }
 
-input#search {
+input.inp-search {
+    width: inherit;
     outline:none;
     border: none;
     padding-left: 8px;
@@ -32,16 +33,17 @@ input#search {
     padding: 2.5px 0;
 }
 
-input#search:focus, input#search:focus + .svg-item-icon {
+input.inp-search:focus, input.inp-search:focus + .svg-item-icon {
     outline:none;
     border-bottom-width: 2px;
     border-bottom-style: solid; 
     border-bottom-color: #E97F03;
     transition: border-bottom-color .2s linear;
     fill: #E97F03;
+    transition: fill .2s linear;
 }
 
-input#search:focus::placeholder {
+input.inp-search:focus::placeholder {
     color: transparent;
     transition: color .2s linear;
 }
@@ -83,8 +85,7 @@ div.image {
 }
 
 div.image img {
-    width: 59px;
-    height: 79px;
+    max-width: 26%;
 }
 
 div.name {
@@ -167,7 +168,7 @@ div.counter {
 }
 
 div.counter input {
-    border: 1px solid rgba(1, 1, 1, 1);
+    border: 1px solid #323232;
     border-width: 1px 0;
     width: 100px;
     height: 38px;
@@ -181,7 +182,7 @@ div.counter input {
 div.counter button{
     background:white;
     color: #E97F03;
-    border: 1px solid rgba(1, 1, 1, 1);
+    border: 1px solid #323232;
     width: 40px;
     height: 40px;
     font-size: 24px;
@@ -217,28 +218,12 @@ button.cart-btn:hover {
     -moz-border-radius: 10px;
     -o-border-radius: 10px;
     border-radius: 10px;
+    transition: background .2s linear;
 }
 
 /* МОБИЛЬНЫЕ ВЕРСИИ */
 
-@media (max-width: 457px) {
-
-    div.item {
-        flex: 0 0 155px;
-    }
-
-    div.detail {
-        flex-direction: column;
-    }
-
-    div.image-detail {
-        margin: 0;
-        background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.15)), color-stop(50%, rgba(0, 0, 0, 0)));
-        background: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0) 50%);
-        background: linear-gradient(360deg, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0) 50%);
-        border:none;
-    }
-
+@media (max-width: 850px) {
     div.details {
         margin: 16px 24px;
     }
@@ -247,7 +232,7 @@ button.cart-btn:hover {
         order: 1;
         justify-content: space-between;
         margin: 16px 0;
-        width: 457px;
+        width: 100%;
     }
     div.price-detail {
         flex-wrap: wrap;
@@ -261,8 +246,28 @@ button.cart-btn:hover {
     div.counter {
         margin: 0px;
     }
-    
+}
 
-    /* 
-    background: yellow;background: -moz-radial-gradient(ellipse, red, yellow);background: -webkit-radial-gradient(ellipse, red, yellow);background: -ms-radial-gradient(ellipse, red, yellow);background: -o-radial-gradient(ellipse, red, yellow);     */
+@media (max-width: 700px) {
+    div.detail {
+        flex-direction: column;
+    }
+
+    div.image-detail {
+        margin: 0;
+        background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.15)), color-stop(50%, rgba(0, 0, 0, 0)));
+        background: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0) 50%);
+        background: linear-gradient(360deg, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0) 50%);
+        border:none;
+    }
+}
+
+@media (max-width: 457px) {
+    div.header-item.search-item {
+        width: 200px;
+    }
+
+    div.item {
+        flex: 0 0 155px;
+    }
 }
