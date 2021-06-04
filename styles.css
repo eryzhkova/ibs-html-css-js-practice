@@ -24,13 +24,15 @@ input.inp-search {
     outline:none;
     border: none;
     padding-left: 8px;
-    order: 1
+    order: 1;
+    transition: border-bottom-color .2s linear;
 }
 
 .svg-item-icon {
     fill: #323232;
     margin: 7px 0;
     padding: 2.5px 0;
+    transition: border-bottom-color .2s linear;
 }
 
 input.inp-search:focus, input.inp-search:focus + .svg-item-icon {
@@ -38,7 +40,6 @@ input.inp-search:focus, input.inp-search:focus + .svg-item-icon {
     border-bottom-width: 2px;
     border-bottom-style: solid; 
     border-bottom-color: #E97F03;
-    transition: border-bottom-color .2s linear;
     fill: #E97F03;
     transition: fill .2s linear;
 }
@@ -69,6 +70,7 @@ div.item {
     color:#323232;
     align-items: center;
     text-align: center;
+    transition: background .2s linear;
 }
 
 div.svg-catalog {
@@ -114,7 +116,6 @@ div.item:hover {
     -moz-border-radius: 10px;
     -o-border-radius: 10px;
     border-radius: 10px;
-    transition: background .2s linear;
 }
 
 /* DETAIL PAGE */
@@ -205,6 +206,7 @@ button.cart-btn {
     justify-content: center;
 
     color: #FFFFFF;
+    transition: background .2s linear;
 }
 
 div.price-detail svg {
@@ -218,7 +220,6 @@ button.cart-btn:hover {
     -moz-border-radius: 10px;
     -o-border-radius: 10px;
     border-radius: 10px;
-    transition: background .2s linear;
 }
 
 /* МОБИЛЬНЫЕ ВЕРСИИ */
