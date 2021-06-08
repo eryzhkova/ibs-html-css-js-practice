@@ -32,7 +32,10 @@ input.inp-search {
     fill: #323232;
     margin: 7px 0;
     padding: 2.5px 0;
-    transition: border-bottom-color .2s linear;
+    transition-property: border-bottom-color, fill;
+    transition-duration: .2s;
+    transition-timing-function: linear;
+
 }
 
 input.inp-search:focus, input.inp-search:focus + .svg-item-icon {
@@ -41,12 +44,14 @@ input.inp-search:focus, input.inp-search:focus + .svg-item-icon {
     border-bottom-style: solid; 
     border-bottom-color: #E97F03;
     fill: #E97F03;
-    transition: fill .2s linear;
+}
+
+input.inp-search::placeholder {
+    transition: color .2s linear;
 }
 
 input.inp-search:focus::placeholder {
     color: transparent;
-    transition: color .2s linear;
 }
 
 svg.svg-item {
