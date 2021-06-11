@@ -91,10 +91,6 @@ div.image {
     justify-content: center;
 }
 
-div.image img {
-    max-width: 26%;
-}
-
 div.name {
     display: flex;
     justify-content: center;
